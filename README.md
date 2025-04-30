@@ -1,1 +1,1 @@
-# UOMG
+# ÜOMG kalkulyator
