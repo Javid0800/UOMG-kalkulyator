@@ -1,25 +1,36 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int n;
-    double cavab, cavab_suret=0, cavab_mexrec=0;
-    
-    cout<<"Dərslərin sayını daxil edin: ";
-    cin>>n;
-    
-    for(int i=1; i<=n; i++)
+int main() {
+    double eded1, eded2;
+    char hesap;
+
+    cout<<"1. Ededi yazin: ";
+    cin>>eded1;
+    cout<<"2. Ededi yazin: ";
+    cin>>eded2;
+    cout<<"hesap (+, -, *, /): ";
+    cin>>hesap;
+
+    switch(hesap)
     {
-        double bal, kredit;
-        cout<<i<<". Ümumi Bal ve Krediti: ";
-        cin>>bal>>kredit;
-        cavab_suret+=bal*kredit;
-        cavab_mexrec+=kredit;
+        case '+':
+            cout<<"Cavab: "<<eded1+eded2;
+            break;
+        case '-':
+            cout<<"Cavab: "<<eded1-eded2;
+            break;
+        case '*':
+            cout<<"Cavab: "<<eded1*eded2;
+            break;
+        case '/':
+            if(eded2!=0)
+                cout<<"Cavab: "<<eded1/eded2;
+            else
+                cout << "Xeta: Sifira bolunme yoxdur!";
+            break;
+        default:
+            cout << "Xeta!";
     }
-    
-    cavab=cavab_suret/cavab_mexrec;
-    cout<<"Ortalama: "<<cavab;
-    
     return 0;
 }
